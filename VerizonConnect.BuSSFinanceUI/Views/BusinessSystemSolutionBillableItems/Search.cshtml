@@ -1,0 +1,52 @@
+﻿@model VerizonConnect.BusinessSystemSolutionFinanceUI.Entities.BuSSSCM.BuSSCustomers
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<br /><br /><br /><br /><br />
+<h2>Search</h2>
+
+<hr />
+
+<form asp-controller="BusinessSystemSolutionBillableItems" asp-action="Search" method="POST">
+
+    <div class="row input-group" data-provide="datepicker">
+        <label>Cart Item ID</label>
+        <input type="text" name="CartBillableItemID" id="CartBillableItemID" placeholder="Enter Cart Item ID Here" style="width:300%" value="" class="form-control" />
+    </div>
+    <br />
+    <div class="row input-group" data-provide="datepicker">
+        <div class="row">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+                <label asp-for="CustomerName" class="control-label">Customer List</label>
+                <select name="customerNumber" id="customerNumber" asp-for="CustomerNumber" class="form-control" asp-items="@(new SelectList(ViewBag.customerList, "Value", "Text"))" required></select>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row input-group" data-provide="datepicker">
+        <label>Order Confirmation ID</label>
+        <input type="text" name="ConfirmationID" id="ConfirmationID" placeholder="Enter Confirmation ID Here" style="width:300%" value="" class="form-control" />
+    </div>
+    <br />
+    <div class="row input-group" data-provide="datepicker">
+        <label>Invoice Start Date</label>
+        <input type="date" asp-format="{0:yyyy-MM-dd}" name="startDate" id="startDate" placeholder="MM/DD/YYYY" style="width:300%" value="" class="form-control" />
+    </div>
+    <br />
+    <div class="row input-group" data-provide="datepicker">
+        <label>Invoice End Date</label>
+        <input type="date" asp-format="{0:yyyy-MM-dd}" name="endDate" id="endDate" placeholder="MM/DD/YYYY" style="width:300%" value="" class="form-control" />
+    </div>
+    <br />
+    <div class="input-group-btn">
+        <input type="submit" class="btn btn-primary" value="Search" />
+    </div>
+</form>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,477 @@
+﻿@model VerizonConnect.BusinessSystemSolutionFinanceUI.Entities.BuSSSCM.CartBillableItems
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CartBillableItems</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IotorderId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IotorderId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Eoorderid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Eoorderid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderSource)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrderSource)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SalesforceOpportunityId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SalesforceOpportunityId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmationId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzworderNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzworderNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwlocationCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwlocationCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SequenceNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SequenceNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cstponbr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cstponbr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lnitmseq)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lnitmseq)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Itemnmbr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Itemnmbr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Unitprce)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Unitprce)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillAddress1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillAddress2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillAddress2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillZipcode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillZipcode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillCountry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtytoinv)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtytoinv)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Itmclscd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Itmclscd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Itemdesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Itemdesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ItmclscdlistDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ItmclscdlistDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Serltnum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Serltnum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Serltqty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Serltqty)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxAmt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxAmt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Debitamt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Debitamt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LineItemTax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LineItemTax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RowNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RowNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxAddress1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxAddress2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxAddress2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxZipcode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxZipcode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxCountry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StateTax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StateTax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FederalTax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FederalTax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwmultilineSequenceNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwmultilineSequenceNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwfulfillmentId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwfulfillmentId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwfirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwfirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwmiddleName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwmiddleName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwlastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwlastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vzwphone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vzwphone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwemailAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwemailAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwcontactType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwcontactType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeviceType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceLabel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeviceLabel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FleetName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FleetName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleLabel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VehicleLabel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserDefinedLabels)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserDefinedLabels)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SellerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SellerKey)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SellerKey)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModelType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModelType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseItemName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseItemName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Billable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Billable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillToPo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillToPo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchasePrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PurchasePrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ppptype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ppptype)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnitType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Units)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Units)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Action)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Action)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Crdrid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Crdrid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vehid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LicensePlate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LicensePlate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Makename)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Makename)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modelname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CartOrder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CartOrder.Ordocnum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Scmorder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Scmorder.ConfirmationId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SubmitPurchaseItemStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubmitPurchaseItemStatus.ContentId)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CartBillableItemId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

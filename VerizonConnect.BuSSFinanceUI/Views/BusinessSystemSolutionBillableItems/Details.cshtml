@@ -1,0 +1,278 @@
+﻿@model VerizonConnect.BusinessSystemSolutionFinanceUI.Entities.BuSSSCM.CartBillableItems
+
+@{
+    ViewData["Title"] = "Details";
+}
+<br /><br /><br /><br /><br />
+<h2 style="font-weight:bold;">Cart Item @Model.CartBillableItemId Details - @Model.CartOrder.Custname</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        @*Hidden fields to update DB*@
+        @Html.HiddenFor(model => model.CartBillableItemId)
+        @Html.HiddenFor(model => model.CartOrderId)
+        @Html.HiddenFor(model => model.ScmorderId)
+        @Html.HiddenFor(model => model.IotorderId)
+        @Html.HiddenFor(model => model.Eoorderid)
+        @Html.HiddenFor(model => model.OrderSource)
+        @Html.HiddenFor(model => model.SalesforceOpportunityId)
+        @Html.HiddenFor(model => model.ConfirmationId)
+        @Html.HiddenFor(model => model.SequenceNumber)
+        @Html.HiddenFor(model => model.Lnitmseq)
+        @Html.HiddenFor(model => model.Unitprce)
+        @Html.HiddenFor(model => model.BillAddress1)
+        @Html.HiddenFor(model => model.BillAddress2)
+        @Html.HiddenFor(model => model.BillCity)
+        @Html.HiddenFor(model => model.BillState)
+        @Html.HiddenFor(model => model.BillZipcode)
+        @Html.HiddenFor(model => model.BillCountry)
+        @Html.HiddenFor(model => model.Quantity)
+        @Html.HiddenFor(model => model.Qtytoinv)
+        @Html.HiddenFor(model => model.Itmclscd)
+        @Html.HiddenFor(model => model.Serltqty)
+        @Html.HiddenFor(model => model.TaxAmt)
+        @Html.HiddenFor(model => model.Debitamt)
+        @Html.HiddenFor(model => model.LineItemTax)
+        @Html.HiddenFor(model => model.RowNumber)
+        @Html.HiddenFor(model => model.TaxAddress2)
+        @Html.HiddenFor(model => model.VzwmultilineSequenceNumber)
+        @Html.HiddenFor(model => model.VzwfulfillmentId)
+        @Html.HiddenFor(model => model.VzwcontactType)
+        @Html.HiddenFor(model => model.DeviceLabel)
+        @Html.HiddenFor(model => model.UserDefinedLabels)
+        @Html.HiddenFor(model => model.SellerName)
+        @Html.HiddenFor(model => model.SellerKey)
+        @Html.HiddenFor(model => model.ModelType)
+        @Html.HiddenFor(model => model.Source)
+        @Html.HiddenFor(model => model.Crdrid)
+        @Html.HiddenFor(model => model.Vehid)
+        @Html.HiddenFor(model => model.Year)
+        @Html.HiddenFor(model => model.Makename)
+        @Html.HiddenFor(model => model.Modelname)
+        @Html.HiddenFor(model => model.IsDeleted)
+        @Html.HiddenFor(model => model.CreatedDate)
+        @Html.HiddenFor(model => model.SubmitPurchaseItemStatusId)
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Itemnmbr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Itemnmbr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ItmclscdlistDescription)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ItmclscdlistDescription)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchasePrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PurchasePrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ppptype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ppptype)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeviceType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Serltnum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Serltnum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleLabel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VehicleLabel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LicensePlate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LicensePlate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Itemdesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Itemdesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzworderNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzworderNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwlocationCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwlocationCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FleetName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FleetName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CartOrder.Custname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CartOrder.Custname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillStartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillStartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillEndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillEndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cstponbr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cstponbr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseItemName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseItemName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Billable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Billable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillToPo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillToPo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StateTax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StateTax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FederalTax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FederalTax)
+        </dd>
+
+
+        @*Tax information*@
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxAddress1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxAddress1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxZipcode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxZipcode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TaxCountry)
+        </dd>
+
+
+        @*Unit Data*@
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UnitType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Units)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Units)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Action)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Action)
+        </dd>
+
+        @*Contact Info*@
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwemailAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwemailAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CartOrder.Custname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CartOrder.Custname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwfirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwfirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vzwphone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vzwphone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VzwemailAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VzwemailAddress)
+        </dd>
+        <a asp-action="EditAsync" asp-route-id="@Model.CartBillableItemId">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </dl>
+</div>

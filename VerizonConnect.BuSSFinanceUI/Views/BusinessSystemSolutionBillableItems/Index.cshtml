@@ -1,0 +1,84 @@
+﻿@model IEnumerable<VerizonConnect.BusinessSystemSolutionFinanceUI.Entities.BuSSSCM.BuSSBillableItems>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br /><br /><br /><br /><br />
+<h2>Cart Billable Items List</h2>
+
+@if (Model.Count() < 1)
+{
+    <br />
+    <h5>We are sorry, but your search did not return any results. Try searching again with new parameters.</h5>
+}
+
+else
+{
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item">
+                <a id="previous-page" class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            @*Page Numbers will be inserted here with JQuery*@
+        </ul>
+    </nav>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CartBillableItemId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomerNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ConfirmationId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BillStartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BillEndDate)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="loop">
+            @foreach (var item in Model)
+            {
+                <tr class="loop-row">
+                    <td>
+                        <a asp-action="DetailsAsync" asp-route-id="@item.CartBillableItemId">
+                            @Html.DisplayFor(modelItem => item.CartBillableItemId)
+                        </a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustomerNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustomerName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ConfirmationId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BillStartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BillEndDate)
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.CartBillableItemId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
